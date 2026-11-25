@@ -16,7 +16,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="썸네일 10초 | 무료 블로그·유튜브·인스타 썸네일 만들기">
 <meta property="og:description" content="회원가입 없이 10초 만에 끝내는 무료 썸네일 만들기. 네이버 블로그·인스타·유튜브 비율 그대로 원본 해상도 PNG로 저장하세요.">
-<meta property="og:image" content="./preview.png">
+<meta property="og:image" content="https://mydaesu-lab.github.io/thumb-maker/preview.png">
 <meta property="og:image:alt" content="썸네일 10초로 만든 예시 썸네일">
 <meta property="og:image:width" content="720">
 <meta property="og:image:height" content="720">
@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="썸네일 10초 | 무료 블로그·유튜브·인스타 썸네일 만들기">
 <meta name="twitter:description" content="회원가입 없이 10초 만에 끝내는 무료 썸네일 만들기. 플랫폼 비율 그대로 원본 해상도 PNG 저장.">
-<meta name="twitter:image" content="./preview.png">
+<meta name="twitter:image" content="https://mydaesu-lab.github.io/thumb-maker/preview.png">
 
 <link rel="canonical" href="https://mydaesu-lab.github.io/thumb-maker/">
 <meta property="og:url" content="https://mydaesu-lab.github.io/thumb-maker/">
@@ -394,6 +394,12 @@
   @media (max-width: 720px){
     .free-pill{display:none}
     .sibling-link{font-size:11px;padding:6px 11px;gap:5px}
+    .topbar-inner{flex-wrap:wrap;gap:7px}
+    .topbar-actions{width:100%;flex-wrap:wrap;gap:5px}
+  }
+  @media (max-width: 400px){
+    .sibling-link{font-size:10.5px;padding:5px 8px;gap:4px}
+    .topbar-actions{gap:5px}
   }
   @media (min-width: 981px) and (max-width: 1180px){
     .layout{grid-template-columns:minmax(320px,360px) minmax(0,1fr)}
@@ -412,7 +418,10 @@
       </span>
     </a>
     <div class="topbar-actions">
-      <a class="sibling-link" href="https://mydaesu-lab.github.io/safe-photo/" title="안심 사진 편집기 — 사진 속 개인정보 가리기"><span aria-hidden="true">🔒</span><span>안심 사진 편집기</span></a>
+      <a class="sibling-link" href="https://mydaesu-lab.github.io/" title="대성랩 무료 웹툴 전체 보기"><span aria-hidden="true">🏠</span><span>홈</span></a>
+      <a class="sibling-link" href="https://mydaesu-lab.github.io/photo-merge/" title="사진 합치기 · 전후 비교 메이커"><span aria-hidden="true">🧩</span><span>사진 합치기</span></a>
+      <a class="sibling-link" href="https://mydaesu-lab.github.io/tax-calc/" title="2026 연말정산 · 고향사랑기부제 절세 계산기"><span aria-hidden="true">🧮</span><span>연말정산</span></a>
+      <a class="sibling-link" href="https://mydaesu-lab.github.io/safe-photo/" title="안심 사진 편집기 — 사진 속 개인정보 가리기"><span aria-hidden="true">🔒</span><span>안심 사진</span></a>
       <span class="free-pill">무료 · 설치 없음</span>
     </div>
   </div>
@@ -683,7 +692,10 @@
     <nav class="foot-nav" aria-label="서비스 정보">
       <button class="foot-link" type="button" data-modal="about">서비스 소개</button>
       <button class="foot-link" type="button" data-modal="privacy">개인정보처리방침</button>
-      <a class="foot-link" href="https://mydaesu-lab.github.io/safe-photo/">🔒 안심 사진 편집기</a>
+      <a class="foot-link" href="https://mydaesu-lab.github.io/">🏠 전체 툴</a>
+      <a class="foot-link" href="https://mydaesu-lab.github.io/safe-photo/">🔒 안심 사진</a>
+      <a class="foot-link" href="https://mydaesu-lab.github.io/photo-merge/">🧩 사진 합치기</a>
+      <a class="foot-link" href="https://mydaesu-lab.github.io/tax-calc/">🧮 연말정산</a>
     </nav>
     <p class="foot-copy">© 2026 썸네일 10초 · 문구와 이미지는 내 기기 밖으로 나가지 않아요</p>
   </div>
