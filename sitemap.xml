@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  썸네일 10초 — sitemap.xml
+  배포 주소: https://mydaesu-lab.github.io/thumb-maker/
+  개인정보처리방침·서비스 소개는 index.html 안의 #privacy · #about 으로 열리므로
+  사이트맵에는 홈 한 개만 등록합니다.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mydaesu-lab.github.io/thumb-maker/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
