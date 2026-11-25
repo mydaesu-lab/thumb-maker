@@ -40,6 +40,15 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9437997408751622"
      crossorigin="anonymous"></script>
 
+<!-- Google tag (gtag.js) · GA4 방문자 분석 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GFRNHP2GC4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GFRNHP2GC4');
+</script>
+
 <!-- 구조화 데이터: 웹앱 정보 + FAQ (검색 결과에 질문·답변 노출) -->
 <script type="application/ld+json">
 {
@@ -968,6 +977,12 @@
     return (FONTS[fontId] || FONTS.noto).stack;
   }
 
+  /* GA4 이벤트: gtag가 없거나 차단된 환경에서도 화면은 그대로 동작한다 */
+  function track(name, params) {
+    if (typeof gtag !== 'function') return;
+    try { gtag('event', name, params || {}); } catch (e) { /* 분석 실패는 무시 */ }
+  }
+
   function toast(msg) {
     toastEl.textContent = msg;
     toastEl.classList.add('show');
@@ -1521,6 +1536,7 @@
     var btn = e.target.closest('[data-preset]');
     if (!btn) return;
     setState({ preset: btn.getAttribute('data-preset') });
+    track('select_platform', { platform: state.preset });
   });
 
   styleRow.addEventListener('click', function (e) {
@@ -1761,6 +1777,7 @@
         a.click();
         a.parentNode.removeChild(a);
         setTimeout(function () { URL.revokeObjectURL(url); }, 3000);
+        track('download_png', { platform: state.preset });
         toast('PNG를 저장했어요 (' + p.w + '×' + p.h + ')');
       }, 'image/png');
     } catch (err) {
@@ -1785,6 +1802,7 @@
         })
       });
       navigator.clipboard.write([item]).then(function () {
+        track('copy_clipboard', { platform: state.preset });
         toast('클립보드에 복사했어요. 붙여넣기(Ctrl+V)로 사용하세요.');
       }).catch(function () {
         toast('복사가 차단됐어요. PNG 다운로드를 이용해 주세요.');
